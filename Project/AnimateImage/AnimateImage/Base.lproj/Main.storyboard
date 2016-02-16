@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimateImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick.png" translatesAutoresizingMaskIntoConstraints="NO" id="uxL-HZ-d1K">
+                                <rect key="frame" x="40" y="243" width="10" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="D8j-Fz-Tbf"/>
+                                    <constraint firstAttribute="height" constant="115" id="Xaz-u8-9IO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-Tj-jE8">
+                                <rect key="frame" x="272" y="550" width="57" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.85211734344801227" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYO-GW-my3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uxL-HZ-d1K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aGC-DP-aCd"/>
+                            <constraint firstItem="uxL-HZ-d1K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="jWg-wu-xbU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h3d-Tj-jE8" secondAttribute="bottom" constant="20" id="lS7-0P-IG9"/>
+                            <constraint firstItem="h3d-Tj-jE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wTE-9c-mdH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="uxL-HZ-d1K" id="4sJ-Zj-tXv"/>
+                        <outlet property="leftConstraint" destination="jWg-wu-xbU" id="Hrp-6o-lbT"/>
+                        <outlet property="widthConstraint" destination="D8j-Fz-Tbf" id="ef3-tL-TFE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="370"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tick.png" width="108" height="115"/>
+    </resources>
+</document>
